@@ -1,0 +1,95 @@
+﻿@model projectMVC.Models.BookingModel
+@{
+    ViewData["Title"] = "Boka tid";
+}
+<h2>@ViewBag.confirmation</h2>
+
+<h2>Boka tid</h2>
+
+<div class="bookContainer">
+
+    <h2>Boka tid: </h2><br />
+
+    <form method="post">
+
+        <div class="form-group">
+            <label asp-for="treatment">1. Välj behandling:</label>
+            <select asp-for="treatment" class="form-control" id="treatment">
+                <option value="klippning">Klippning</option>
+                <option value="Avancerad klippning">Avancerad klippning (stor förändring eller mycket hår)</option>
+                <option value="Maskinklippning">Maskinklippning (endast sidorna)</option>
+                <option value="Barnklipp 0-4 år">Barnklipp 0-4 år</option>
+                <option value="Barnklipp 5-10 år">Barnklipp 5-10 år</option>
+                <option value="Lugg">Lugg</option>
+                <option value="Tvätt & fön/styling">Tvätt & fön/Styling</option>
+                <option value="Uppsättning">Uppsättning</option>
+                <option value="Bruduppsättning">Bruduppsättning</option>
+                <option value="Permanent inkl klipp">Permanent inkl. klipp</option>
+                <option value="Inpackning">Inpackning i samband med behandling med extra massage</option>
+            </select>
+            <span asp-validation-for="treatment" class="error"></span>
+            <br />
+        </div>-->
+
+        <div class="form-group">
+            <label asp-for="datepicker">2. Välj datum:</label>
+            <input asp-for="datepicker" id="datepicker" width="276" />
+            <span asp-validation-for="datepicker" class="error"></span>
+            <br />
+        </div>
+
+            <div class="form-group">
+                <div asp-validation-summary="ModelOnly"></div>
+                <!--<label for="sel1">3. Fyll i dina uppgifter: </label><br />-->
+                <label asp-for="Namn"></label>
+                <input asp-for="Namn" class="form-control" id="Namn:" />
+                <span asp-validation-for="Namn" class="error"></span>
+                <br />
+
+                <label asp-for="Adress"></label>
+                <input asp-for="Adress" class="form-control" id="Adress:" />
+                <span asp-validation-for="Adress" class="error"></span>
+                <br />
+
+                <label asp-for="Postnummer"></label>
+                <input asp-for="Postnummer" class="form-control" id="Postnummer" />
+                <span asp-validation-for="Postnummer" class="error"></span>
+                <br />
+                <label asp-for="Stad"></label>
+                <input asp-for="Stad" class="form-control" id="Stad" />
+                <span asp-validation-for="Stad" class="error"></span>
+                <br />
+
+                <label asp-for="Telefonnummer"></label>
+                <input asp-for="Telefonnummer" class="form-control" id="Telefonnummer" />
+                <span asp-validation-for="Telefonnummer" class="error"></span>
+                <br />
+
+                <label asp-for="Epost"></label>
+                <input asp-for="Epost" class="form-control" id="Epost" />
+                <span asp-validation-for="Epost" class="error"></span>
+                <br />
+
+                <div class="form-check">
+                    <label asp-for="checkbox" class="form-check-label">
+                        <input asp-for="checkbox" class="form-check-input" id="checkbox" value="">Ja tack, skicka bokningsbekräftelse via e-post.
+                    </label>
+                    <br />
+                </div>
+
+                <div class="form-check">
+                    <label asp-for="checkbox" class="form-check-label">
+                        <input asp-for="checkbox" class="form-check-input" id="checkbox" value="">Skicka påminnelse via sms dagen före behandling.
+                    </label>
+                </div>
+
+                <input type="submit" value="Boka" />
+
+
+            </div><!--Slut på form-group-->
+        </form>
+
+
+</div><!--Slut på bookContainer-->
+
+<footer>@ViewBag.text</footer>

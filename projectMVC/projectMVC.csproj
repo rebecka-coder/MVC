@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\styles.css" />
+    <Content Remove="Views\Webdevelopment\Index.cshtml" />
+    <Content Remove="Views\Webdevelopment\_ViewImports.cshtml" />
+    <Content Remove="Views\BookingDone.cshtml" />
+    <Content Remove="booking.json" />
+    <Content Remove="Views\Home\BookingDone.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\WebDevelopment.cs" />
+    <Compile Remove="Controllers\Webdevelopment.cs" />
+    <Compile Remove="Views\Home\Treatments.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+  </ItemGroup>
+</Project>
