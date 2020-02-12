@@ -31,34 +31,48 @@ namespace projectMVC.Controllers
         public IActionResult Booking()
         {
             string f2 = HttpContext.Session.GetString("footer");
-            ViewBag.text = f2;
+            ViewBag.footer = f2;
             return View();
         }
         [HttpGet("/Behandlingar")]
         public IActionResult Treatments()
         {
+            ViewData["Message"] = "Våra öppettider:";
+            ViewBag.text = "Mån-Fre: 08:00 - 18:00";
             string f2 = HttpContext.Session.GetString("footer");
-            ViewBag.text = f2;
+            ViewBag.footer = f2;
             return View();
         }
-        [HttpPost]
+        [HttpPost("/Bokatid")]
         public IActionResult Booking(BookingModel model)
         {
             if (ModelState.IsValid)
             {
+  
                 //Läs in befintlig 
                 var JsonStr = System.IO.File.ReadAllText("bookings.json");
                 var JsonObj = JsonConvert.DeserializeObject<List<BookingModel>>(JsonStr);
                 JsonObj.Add(model);
+
                 //Konvertera till JSON-sträng
                 //Lagra
                 System.IO.File.WriteAllText("bookings.json", JsonConvert.SerializeObject(JsonObj, Formatting.Indented));
 
                 ModelState.Clear(); //Rensar alla fält
-
-                ViewBag.confirmation = "Tack för din bokning!";
+ 
             }
             return View();
+
         }
+        [HttpGet("/Bokningar")]
+        public IActionResult Bookings(BookingModel model)
+        {
+            //Läs in JSON fil, och parsa
+            var JsonStr = System.IO.File.ReadAllText("bookings.json");
+            var JsonObj = JsonConvert.DeserializeObject<IEnumerable<BookingModel>>(JsonStr);
+            return View(JsonObj);
+            
+        }
+
     }
 }

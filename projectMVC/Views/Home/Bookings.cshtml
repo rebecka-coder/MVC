@@ -1,0 +1,30 @@
+﻿@model IEnumerable<projectMVC.Models.BookingModel>
+
+@{
+    ViewData["Title"] = "Bokningar";
+}
+
+<h2>Alla bokningar:</h2>
+
+<div class="bookContainer">
+
+            @foreach (var booking in Model)
+            {
+                <div class="list">
+                <ul><li>Bokning</li></ul>
+                <p>Behandling: @booking.Treatment</p>
+                <p>Datum: @booking.Datepicker</p>
+                <p>Namn: @booking.Namn</p>
+                <p>Adress: @booking.Adress</p>
+                <p>Postnummer: @booking.Postnummer</p>
+                <p>Stad: @booking.Stad</p>
+                <p>Telefonnummer: @booking.Telefonnummer</p>
+                <p>E-post: @booking.Epost</p>
+                <p>Email bekfräftelse: @booking.ConfirmationEmail</p>
+                <p>Sms påminnelse: @booking.SmsReminder</p><br/>
+                </div>
+            }
+   
+</div><!--Slut på bookContainer-->
+
+<footer>@ViewBag.text</footer>

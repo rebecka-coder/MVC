@@ -27,6 +27,7 @@
     <Compile Remove="Controllers\WebDevelopment.cs" />
     <Compile Remove="Controllers\Webdevelopment.cs" />
     <Compile Remove="Views\Home\Treatments.cs" />
+    <Compile Remove="Models\Bookings.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />

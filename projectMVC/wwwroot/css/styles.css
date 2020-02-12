@@ -115,25 +115,19 @@ h3 {
     text-decoration-line:underline;
 }
 .aboutContainer, .treatContainer, .bookContainer {
-    margin-top: 9em;
-    width: 50%;
-    margin-left: 20em;
     background-color: #000000;
-    margin-bottom: 8em;
 }
 .salonPic img {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    width: 65%;
-    margin-bottom:1.5em;
+    margin-bottom:4em;
 }
 .textInfo {
     font-style: italic;
 }
-.form-group {
-    width: 60%;
-    margin-bottom: 1em;
+.textMessage {
+    margin-top: 2.5em;
 }
 .form-group label {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -158,18 +152,85 @@ footer {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .error {
+    color: red;
+    text-align: right;
+    margin-bottom: 1em;
+
+}
+.bookContainer li {
+    list-style: inside;
     color: white;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 /*Mobil skärm*/
-@media (min-width: 576px) {
-  
+@media (max-width:768px) {
+.salonPic img {
+     width: 100%;
+}
+
+.treatContainer, .aboutContainer {
+     margin-top: 5em;
+     width: 98%;
+     padding: 30px;
+     margin-bottom: 8em;
+}
+.bookContainer {
+     width: 98%;
+     padding: 10px;
+     margin-bottom: 8em;
+}
+.list {
+     margin-top: 3.5em;
+     margin-bottom: 2em
+}
 }
 /*Tablets*/
-@media (min-width: 768px) {
-
+@media (min-width:768px) and (max-width:1024px) {
+.salonPic img {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 80%;
+}
+.aboutContainer, .treatContainer {
+     margin-top: 7em;
+     width: 98%;
+     padding: 30px;
+     margin-bottom: 8em;
+}
+.bookContainer {
+     margin-top: 4em;
+     width: 98%;
+     padding: 30px;
+     margin-bottom: 8em;
+}
+.form-group {
+     width: 55%;
+}
+.list {
+     margin-top: 1.5em;
+     margin-bottom: 2em
+}
 }
 /*Desktop och uppåt*/
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
+.salonPic img {
+     width: 65%;
+}
+.aboutContainer, .treatContainer, .bookContainer {
+     width: 50%;
+     margin-left: 20em;
+     margin-bottom: 8em;
+     margin-top: 8em;
+}
+.form-group {
+    width: 55%;
 
-   
+}
+.list {
+     margin-top: 3.5em;
+     margin-bottom: 2em
+}
 }

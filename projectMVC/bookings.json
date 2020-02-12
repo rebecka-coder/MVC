@@ -1,1 +1,26 @@
-﻿[]
+[
+  {
+    "Treatment": "klippning",
+    "Datepicker": "02/20/2020",
+    "Namn": "Sara Hagman",
+    "Adress": "Magistergatan 2",
+    "Postnummer": "81231",
+    "Stad": "Ås",
+    "Telefonnummer": "0701234344",
+    "Epost": "Sara@gmail.com",
+    "ConfirmationEmail": true,
+    "SmsReminder": false
+  },
+  {
+    "Treatment": "Maskinklippning",
+    "Datepicker": "02/13/2020",
+    "Namn": "Kalle Persson",
+    "Adress": "Kontorsvägen 21B",
+    "Postnummer": "12345",
+    "Stad": "Lugnvik",
+    "Telefonnummer": "7023432",
+    "Epost": "kalle@gmail.com",
+    "ConfirmationEmail": true,
+    "SmsReminder": true
+  }
+]
