@@ -22,6 +22,7 @@
     <Content Remove="Views\BookingDone.cshtml" />
     <Content Remove="booking.json" />
     <Content Remove="Views\Home\BookingDone.cshtml" />
+    <Content Remove="Views\_AboutPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Controllers\WebDevelopment.cs" />
